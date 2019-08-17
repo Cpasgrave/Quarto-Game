@@ -1,0 +1,3 @@
+# Quarto-Game
+Quarto Game in HTML CSS JS, 1 or 2 players, with AI
+AI under construction ...
