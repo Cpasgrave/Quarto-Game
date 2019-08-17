@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" type="text/css" media="screen">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <title>Quarto game</title>
+</head>
+<body id="body">
+  <!-- LOADER -->
+  <div id="loader">
+      <div id="container">
+          <div id="fly"><img id="flim" src="https://www.gifandgif.eu/animated_gif/Insects/Animated%20Gif%20Insects%20%2836%29.gif"></div>
+          <div id="wait">wait...</div>
+          <div id="eye1" class="eye">
+              <div class="eyelash"></div>
+              <div class="eyelash second"></div>
+              <div class="eyelash third"></div>
+              <div class="eyelash fourth"></div>
+              <div class="overlid"></div>
+              <div class="eyelid"></div>
+              <div class="border"></div>
+              <div class="white">
+                  <div class="over" id="over1"></div>
+                  <div class="white2"></div>
+                  <div class="black">
+                      <div class="pupil">
+                          <div class="light"></div>
+                          <div class="spark"></div>
+                      </div>
+                      <div class="black2"></div>
+                  </div>
+              </div>
+          </div>
+          <div id="eye2" class="eye">
+              <div class="eyelash"></div>
+              <div class="eyelash second"></div>
+              <div class="eyelash third"></div>
+              <div class="eyelash fourth"></div>
+              <div class="overlid"></div>
+              <div class="eyelid"></div>
+              <div class="border"></div>
+              <div class="white">
+                  <div class="over" id="over2"></div>
+                  <div class="white2"></div>
+                  <div class="black">
+                      <div class="pupil">
+                          <div class="light"></div>
+                          <div class="spark"></div>
+                      </div>
+                      <div class="black2"></div>
+                  </div>
+              </div>
+          </div>
+          <div id="eye3" class="eye">
+              <div class="eyelash"></div>
+              <div class="eyelash second"></div>
+              <div class="eyelash third"></div>
+              <div class="eyelash fourth"></div>
+              <div class="overlid"></div>
+              <div class="eyelid"></div>
+              <div class="border"></div>
+              <div class="white">
+                  <div class="over" id="over3"></div>
+                  <div class="white2"></div>
+                  <div class="black">
+                      <div class="pupil">
+                          <div class="light"></div>
+                          <div class="spark"></div>
+                      </div>
+                      <div class="black2"></div>
+                  </div>
+              </div>
+          </div>
+          <div id="eye4" class="eye">
+              <div class="eyelash"></div>
+              <div class="eyelash second"></div>
+              <div class="eyelash third"></div>
+              <div class="eyelash fourth"></div>
+              <div class="overlid"></div>
+              <div class="eyelid"></div>
+              <div class="border"></div>
+              <div class="white">
+                  <div class="over" id="over4"></div>
+                  <div class="white2"></div>
+                  <div class="black">
+                      <div class="pupil">
+                          <div class="light"></div>
+                          <div class="spark"></div>
+                      </div>
+                      <div class="black2"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  
+  <!-- NEW GAME -->
+  <div id="nGbox">
+    <div id="newGame">
+      <h1>New Game</h1>
+    </div>
+    <div id="G12P">
+      <div class="nG" id="G1P">1p.</div>
+      <div class="nG" id="G2P">2p.</div>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    
+    <!-- OVERLAY -->
+    <div id="overlay"></div>
+    
+    <div id="width_limiter">
+
+      <!--TITLE + MENU -->
+      <header>
+        <img id="title" src="https://i.ibb.co/tq8CPxR/Logo.png">
+        <div id="menu" class="blur">
+          <span id="rules_button">Rules</span>
+
+          <!--  info messages space  -->
+          <span id="message"></span>
+
+
+
+          <span id="settings_button">Settings</span>
+        </div>
+        <!--RULES-->
+        <div id="rules">Quarto is a multi-awarded 2 player game created by Blaise Müller, distributed by Gigamic.
+
+The 16 pieces have 4 properties:
+
+color (green or orange),
+shape (circle or square),
+height (simple or double),
+body (full or holed),
+
+The goal is to be the first to create a line of 4 pawns sharing one property.
+
+Player 1 chooses a pawn and gives it to player 2, player 2 places it on the board. Then P2 chooses a piece and P1 plays it.
+
+Winning alignments are rows, columns, major diagonals.
+In higher difficulty levels, other groups of 4 pieces than lines can be considered a win. 
+        </div>
+          
+        <!--SETTINGS-->
+        <div id="settings">
+          <p>Sound<br>
+            level</p>
+        </div>
+        <div id="line" class="blur"></div>
+      </header>
+      <div id="margin"></div>
+
+      <!-- BOARD -->
+      <section class="blur">
+        <div id="board">
+          <div id="winline"></div>
+          <img id="board_img" src="https://i.ibb.co/Tkt9mvt/Board.jpg">
+          <table id="board_table">
+          <tr class="row">
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+          </tr>
+          <tr class="row">
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+          </tr>
+          <tr class="row">
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+          </tr>
+          <tr class="row">
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+            <td class="td free"><div class="cell"></div></td>
+          </tr>
+          </table>
+          <div id="chosen_spot">
+            <img id="play_again" src="https://i.ibb.co/v1SPsbj/play-again.png"  border="0">
+            <div id="pawn_box"></div>
+            <div id="message2"></div>
+          </div>
+        </div>
+
+        <!-- PAWNS -->
+        <div id="pawnset">
+          <div class="pawn gre sim squ ful off"><img class="pimg" src="https://i.ibb.co/Sf5dSSh/N-C.png"></div>
+          <div class="pawn gre sim squ hol off"><img class="pimg" src="https://i.ibb.co/ZGxgsVd/N-Ct.png"></div>
+          <div class="pawn gre sim cir ful off"><img class="pimg" src="https://i.ibb.co/YktXW5p/N-R.png"></div>
+          <div class="pawn gre sim cir hol off"><img class="pimg" src="https://i.ibb.co/hR6bysc/N-Rt.png"></div>
+          <div class="pawn gre dou squ ful off"><img class="pimg" src="https://i.ibb.co/2Sc1sn8/N-C2.png"></div>
+          <div class="pawn gre dou squ hol off"><img class="pimg" src="https://i.ibb.co/hD0X10B/N-C2t.png"></div>
+          <div class="pawn gre dou cir ful off"><img class="pimg" src="https://i.ibb.co/Wy1Nx8c/N-R2.png"></div>
+          <div class="pawn gre dou cir hol off"><img class="pimg" src="https://i.ibb.co/DM5vWJj/N-R2t.png"></div>
+          
+          <div class="pawn ora sim squ ful off"><img class="pimg" src="https://i.ibb.co/m0LcWcC/B-C.png"></div>
+          <div class="pawn ora sim squ hol off"><img class="pimg" src="https://i.ibb.co/pdhcWLY/B-Ct.png"></div>
+          <div class="pawn ora sim cir ful off"><img class="pimg" src="https://i.ibb.co/SthBch6/B-R.png"></div>
+          <div class="pawn ora sim cir hol off"><img class="pimg" src="https://i.ibb.co/FxjcRvx/B-Rt.png"></div>
+          <div class="pawn ora dou squ ful off"><img class="pimg" src="https://i.ibb.co/X42yyvr/B-C2.png"></div>
+          <div class="pawn ora dou squ hol off"><img class="pimg" src="https://i.ibb.co/5xRCS4Z/B-C2t.png"></div>
+          <div class="pawn ora dou cir ful off"><img class="pimg" src="https://i.ibb.co/qsK9f33/B-R2.png"></div>
+          <div class="pawn ora dou cir hol off"><img class="pimg" src="https://i.ibb.co/7Cqh5qT/B-R2t.png"></div>
+        </div>
+      </section>
+    </div>    
+  </div>
+
+</body>
+</html>
